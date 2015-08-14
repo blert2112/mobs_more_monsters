@@ -1,0 +1,15 @@
+**CODE**
+--------
+See Mobs.Redo license
+
+
+**MODELS/TEXTURES**
+-------------------
+Unknown
+Artist/origin: Blockmen
+
+
+**SOUNDS**
+----------
+Unknown
+Artist/origin: assuming Blockmen

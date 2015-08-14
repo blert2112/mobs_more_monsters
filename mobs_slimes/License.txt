@@ -1,0 +1,19 @@
+**CODE**
+--------
+See Mobs.Redo license
+
+
+**MODELS/TEXTURES**
+-------------------
+WTFPL
+Author/origin: Tomas J. Luis
+
+Jeija_glue texture by: Jeija
+
+**SOUNDS**
+----------
+Original sound for slime damage by RandomationPictures under licence CC0 1.0.
+http://www.freesound.org/people/RandomationPictures/sounds/138481/
+
+Original sounds for slime jump, land and death by Dr. Minky under licence CC BY 3.0.
+http://www.freesound.org/people/DrMinky/sounds/

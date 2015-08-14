@@ -1,0 +1,15 @@
+**CODE**
+--------
+See Mobs.Redo license
+
+
+**MODELS/TEXTURES**
+-------------------
+Unknown
+Artist/origin: Davedevils (from his subgame MineClone)
+
+
+**SOUNDS**
+----------
+Unknown
+Artist/origin: Looks to be from the TNT mod

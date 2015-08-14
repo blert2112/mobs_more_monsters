@@ -1,0 +1,14 @@
+**CODE**
+--------
+See Mobs.Redo license
+
+
+**MODELS/TEXTURES**
+-------------------
+WTFPL
+Artist/origin: Devyn Collier Johnson (DevynCJohnson@Gmail.com)
+
+
+**SOUNDS**
+----------
+Not applicable.

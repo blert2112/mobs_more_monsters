@@ -1,0 +1,63 @@
+
+		name = name,
+		type = def.type,
+
+		visual = def.visual,
+		mesh = def.mesh,
+		textures = {
+			{"mobs_medved.png"},
+		},
+		visual_size = def.visual_size or {x = 1, y = 1},
+		collisionbox = def.collisionbox,
+		rotate = math.rad(def.rotate or 0), --  0=front, 90=side, 180=back, 270=side2
+		animation = def.animation,
+		
+		makes_footstep_sound = def.makes_footstep_sound or false,
+		sounds = def.sounds or {},
+
+		hp_min = def.hp_min or 5,
+		hp_max = def.hp_max or 10,
+		armor = def.armor,
+		recovery_time = def.recovery_time or 0.5,
+		knock_back = def.knock_back or 3,
+		blood_amount = def.blood_amount or 5,
+		blood_texture = def.blood_texture or "mobs_blood.png",
+		light_damage = def.light_damage or 0,
+		water_damage = def.water_damage or 0,
+		lava_damage = def.lava_damage or 0,
+		fall_damage = def.fall_damage or 1,
+
+		passive = def.passive or false,
+		damage = def.damage,
+		attack_type = def.attack_type,
+		arrow = def.arrow,
+		shoot_interval = def.shoot_interval,
+		shoot_offset = def.shoot_offset or 0,
+		attacks_monsters = def.attacks_monsters or false,
+		group_attack = def.group_attack or false,
+		view_range = def.view_range or 5,
+
+		walk_chance = def.walk_chance or 50,
+		walk_velocity = def.walk_velocity or 1,
+		run_velocity = def.run_velocity or 2,
+		stepheight = def.stepheight or 0.6,
+		jump = def.jump or true,
+		jump_height = def.jump_height or 6,
+		jump_chance = def.jump_chance or 0,
+		fly = def.fly,
+		fly_in = def.fly_in or "air",
+		fall_speed = def.fall_speed or -10, -- must be lower than -2 (default: -10)
+		floats = def.floats or 1, -- floats in water by default
+
+		lifetimer = def.lifetimer or 180, -- 3 minutes
+		drops = def.drops or {},
+
+		follow = def.follow or "",
+		replace_rate = def.replace_rate,
+		replace_what = def.replace_what,
+		replace_with = def.replace_with,
+		replace_offset = def.replace_offset or 0,
+
+		
+		
+
