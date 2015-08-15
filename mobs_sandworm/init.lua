@@ -79,6 +79,7 @@ if mobs.mod and mobs.mod == "redo" then
 			if user:get_armor_groups().immortal then
 				return
 			end
+			minetest.chat_send_player(user:get_player_name(), "I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see it's path. Where the fear has gone there will be nothing. Only I will remain.")
 			itemstack:take_item(1)
 			if minetest.get_modpath("vessels") then
 				user:get_inventory():add_item("main", "vessels:glass_bottle")
