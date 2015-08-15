@@ -1,0 +1,14 @@
+**CODE**
+--------
+See Mobs.Redo license
+
+
+**MODELS/TEXTURES**
+-------------------
+GPL v3
+Author/origin: Team NPX, Not-So-Simple-Mobs
+
+
+**SOUNDS**
+----------
+Artist/origin: Team NPX, Not-So-Simple-Mobs
