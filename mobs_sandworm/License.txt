@@ -1,0 +1,20 @@
+**CODE**
+--------
+See Mobs.Redo license
+
+
+**MODELS/TEXTURES**
+-------------------
+GPL v3
+Artist/origin: NPX, from Not-So-Simple_Mobs
+
+Spice Bottle tile:
+WTFPL
+Artist/origin: Vanessa Ezekowitz, from Vessels
+Modified by: blert2112
+
+
+**SOUNDS**
+----------
+GPL v3
+Artist/origin: NPX, from Not-So-Simple_Mobs
