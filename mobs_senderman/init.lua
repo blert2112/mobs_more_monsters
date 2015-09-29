@@ -24,6 +24,7 @@ if mobs.mod and mobs.mod == "redo" then
 		armor = 80,
 		light_damage = 2,
 		damage = 4,
+		reach = 3,
 		attack_type = "dogfight",
 		view_range = 30,
 		walk_velocity = 3,

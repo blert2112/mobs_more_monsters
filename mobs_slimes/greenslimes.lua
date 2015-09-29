@@ -30,6 +30,7 @@ mobs:register_mob("mobs_slimes:green_small", {
 	lava_damage = 3,
 	fall_damage = 0,
 	damage = 1,
+	reach = 1,
 	attack_type = "dogfight",
 	attacks_monsters = true,
 	view_range = 10,
@@ -59,6 +60,7 @@ mobs:register_mob("mobs_slimes:green_medium", {
 	lava_damage = 7,
 	fall_damage = 0,
 	damage = 2,
+	reach = 2,
 	attack_type = "dogfight",
 	attacks_monsters = true,
 	view_range = 10,
@@ -91,6 +93,7 @@ mobs:register_mob("mobs_slimes:green_big", {
 	lava_damage = 11,
 	fall_damage = 0,
 	damage = 3,
+	reach = 3,
 	attack_type = "dogfight",
 	attacks_monsters = true,
 	view_range = 10,
@@ -116,12 +119,12 @@ end
 mobs:spawn_specific("mobs_slimes:green_big",
 	{"default:dirt_with_grass", "default:junglegrass", "default:mossycobble", "ethereal:green_dirt_top"},
 	{"air"},
-	4, 20, 30, 10000, 1, l_spawn_elevation_min, 31000
+	4, 20, 30, 30000, 1, l_spawn_elevation_min, 31000
 )
 mobs:spawn_specific("mobs_slimes:green_medium",
 	{"default:dirt_with_grass", "default:junglegrass", "default:mossycobble", "ethereal:green_dirt_top"},
 	{"air"},
-	4, 20, 30, 20000, 2, l_spawn_elevation_min, 31000
+	4, 20, 30, 30000, 2, l_spawn_elevation_min, 31000
 )
 mobs:spawn_specific("mobs_slimes:green_small",
 	{"default:dirt_with_grass", "default:junglegrass", "default:mossycobble", "ethereal:green_dirt_top"},

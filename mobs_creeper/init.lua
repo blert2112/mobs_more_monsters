@@ -32,6 +32,7 @@ if mobs.mod and mobs.mod == "redo" then
 		water_damage = 2,
 		lava_damage = 15,
 		damage = 21,
+		reach = 2,
 		attack_type = "explode",
 		view_range = 16,
 		run_velocity = 3,
