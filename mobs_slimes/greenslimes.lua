@@ -139,4 +139,3 @@ minetest.register_craftitem("mobs_slimes:green_slimeball", {
 	image = "jeija_glue.png",
 	description="Green Slime Ball",
 })
-end

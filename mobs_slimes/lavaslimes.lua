@@ -148,4 +148,3 @@ minetest.register_craftitem("mobs_slimes:lava_slime", {
 	image = "zmobs_lava_orb.png",
 	description="Lava Slime Ball",
 })
-end
