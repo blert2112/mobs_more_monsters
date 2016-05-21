@@ -1,6 +1,4 @@
 
-local ENABLE_SPAWN_NODE = true
-
 -- sounds
 local green_sounds = {
 	damage = "slimes_damage",
@@ -141,26 +139,4 @@ minetest.register_craftitem("mobs_slimes:green_slimeball", {
 	image = "jeija_glue.png",
 	description="Green Slime Ball",
 })
-
--- spawner block
-if ENABLE_SPAWN_NODE then
-	minetest.register_node("mobs_slimes:green_spawner", {
-		description = "Green Slime Spawner",
-		tiles = {"green_slime_front.png"},
-		is_ground_content = false,
-		groups = {cracky=3, stone=1, mob_spawner=1},
-		sounds = default.node_sound_stone_defaults({
-			dug = {name="slimes_death", gain=0.25}
-		})
-	})
-	minetest.register_abm({
-		nodenames = {"mobs_slimes:green_spawner"},
-		interval = 60.0,
-		chance = 1,
-		action = function(pos, node, active_object_count, active_object_count_wider)
-			local p = pos
-			p.y = p.y + 1
-			minetest.add_entity(p, "mobs_slimes:green_big")
-		end
-	})
 end

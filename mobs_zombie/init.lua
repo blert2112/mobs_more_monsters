@@ -1,7 +1,6 @@
 
 if mobs.mod and mobs.mod == "redo" then
 
-	local ENABLE_SPAWN_NODE = true
 	local ENABLE_MINI_ZOMBIE = true
 
 -- zombie
@@ -115,26 +114,5 @@ if mobs.mod and mobs.mod == "redo" then
 		inventory_image = "mobs_rotten_flesh.png",
 		on_use = minetest.item_eat(1),
 	})
-
--- spawner block
-	if ENABLE_SPAWN_NODE then
-		minetest.register_node("mobs_zombie:zombie_spawner", {
-			description = "Zombie Spawner",
-			tiles = {"zombie_head.png"},
-			is_ground_content = false,
-			groups = {cracky=3, stone=1, mob_spawner=1},
-			sounds = default.node_sound_stone_defaults({
-				dug = {name="mobs_zombie_death", gain=0.25}
-			})
-		})
-		minetest.register_abm({
-			nodenames = {"mobs_zombie:zombie_spawner"},
-			interval = 60.0,
-			chance = 1,
-			action = function(pos, node, active_object_count, active_object_count_wider)
-				minetest.add_entity(pos, "mobs_zombie:zombie")
-			end
-		})
-	end
 
 end

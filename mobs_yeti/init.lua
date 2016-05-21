@@ -3,8 +3,6 @@
 
 if mobs.mod and mobs.mod == "redo" then
 
-	local ENABLE_SPAWN_NODE = true
-
 -- yeti
 	mobs:register_mob("mobs_yeti:yeti", {
 		type = "monster",
@@ -96,27 +94,6 @@ if mobs.mod and mobs.mod == "redo" then
 		obj:setacceleration({x=dir.x*-3, y=-snowball_GRAVITY, z=dir.z*-3})
 		item:take_item()
 		return item
-	end
-
--- spawner block
-	if ENABLE_SPAWN_NODE then
-		minetest.register_node("mobs_yeti:yeti_spawner", {
-			description = "Yeti Spawner",
-			tiles = {"mobs_yeti_face.png"},
-			is_ground_content = false,
-			groups = {cracky=3, stone=1, mob_spawner=1},
-			sounds = default.node_sound_stone_defaults({
-				dug = {name="mobs_stonemonster", gain=0.25}
-			})
-		})
-		minetest.register_abm({
-			nodenames = {"mobs_yeti:yeti_spawner"},
-			interval = 60.0,
-			chance = 1,
-			action = function(pos, node, active_object_count, active_object_count_wider)
-				minetest.add_entity(pos, "mobs_yeti:yeti")
-			end
-		})
 	end
 
 end

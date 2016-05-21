@@ -1,8 +1,6 @@
 
 if mobs.mod and mobs.mod == "redo" then
 
-	local ENABLE_SPAWN_NODE = true
-
 	mobs:register_mob("mobs_senderman:senderman", {
 		type = "monster",
 		visual = "mesh",
@@ -48,23 +46,5 @@ if mobs.mod and mobs.mod == "redo" then
 		-1, 3, 30, 20000, 1, l_spawn_elevation_min, 31000
 	)
 	mobs:register_egg("mobs_senderman:senderman", "Spawn Senderman", "senderman_egg.png", 0)
-
--- spawner block
-	if ENABLE_SPAWN_NODE then
-		minetest.register_node("mobs_senderman:senderman_spawner", {
-			description = "Senderman Spawner",
-			tiles = {"senderman_face.png"},
-			is_ground_content = false,
-			groups = {cracky=3, stone=1, mob_spawner=1}
-		})
-		minetest.register_abm({
-			nodenames = {"mobs_senderman:senderman_spawner"},
-			interval = 60.0,
-			chance = 1,
-			action = function(pos, node, active_object_count, active_object_count_wider)
-				minetest.add_entity(pos, "mobs_senderman:senderman")
-			end
-		})
-	end
 
 end

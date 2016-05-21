@@ -1,8 +1,6 @@
 
 if mobs.mod and mobs.mod == "redo" then
 
-	local ENABLE_SPAWN_NODE = true
-
 -- creeper
 	mobs:register_mob("mobs_creeper:creeper", {
 		type = "monster",
@@ -50,27 +48,6 @@ if mobs.mod and mobs.mod == "redo" then
 		{"air"},
 		-1, 20, 30, 20000, 1, -31000, 31000
 	)
-	mobs:register_egg("mobs_creeper:creeper", "Creeper", "mobs_creeper_inv.png", 1)
+	mobs:register_egg("mobs_creeper:creeper", "Creeper", "mobs_creeper_inv.png", 1)	
 
--- spawner block
-	if ENABLE_SPAWN_NODE then
-		minetest.register_node("mobs_creeper:creeper_spawner", {
-			description = "Creeper Spawner",
-			tiles = {"mobs_creeper_face.png"},
-			is_ground_content = false,
-			groups = {cracky=3, stone=1, mob_spawner=1},
-			sounds = default.node_sound_stone_defaults({
-				dug = {name="tnt_explode", gain=0.25}
-			})
-		})
-		minetest.register_abm({
-			nodenames = {"mobs_creeper:creeper_spawner"},
-			interval = 60.0,
-			chance = 1,
-			action = function(pos, node, active_object_count, active_object_count_wider)
-				minetest.add_entity(pos, "mobs_creeper:creeper")
-			end
-		})
-	end
-	
 end

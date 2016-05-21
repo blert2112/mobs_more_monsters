@@ -1,7 +1,6 @@
 
 if mobs.mod and mobs.mod == "redo" then
 
-	local ENABLE_SPAWN_NODE = true
 	local ENABLE_PUMPKIN_BOOM = true
 	
 	mobs:register_mob("mobs_pumpking:pumpking", {
@@ -106,27 +105,6 @@ if mobs.mod and mobs.mod == "redo" then
 			drops = {
 				{name = "farming:pumpkin_seed", chance = 1, min = 1, max = 4}
 			}
-		})
-	end
-
--- spawner block
-	if ENABLE_SPAWN_NODE then
-		minetest.register_node("mobs_pumpking:pumpking_spawner", {
-			description = "Pumpkin King Spawner",
-			tiles = {"pumpboom.png"},
-			is_ground_content = false,
-			groups = {cracky=3, stone=1, mob_spawner=1},
-			sounds = default.node_sound_stone_defaults({
-				dug = {name="king", gain=0.25}
-			})
-		})
-		minetest.register_abm({
-			nodenames = {"mobs_pumpking:pumpking_spawner"},
-			interval = 180.0,
-			chance = 1,
-			action = function(pos, node, active_object_count, active_object_count_wider)
-				minetest.add_entity(pos, "mobs_pumpking:pumpking")
-			end
 		})
 	end
 

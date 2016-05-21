@@ -1,7 +1,6 @@
 
 if mobs.mod and mobs.mod == "redo" then
 
-	local ENABLE_SPAWN_NODE = true
 	local spice_duration = 20.0		--seconds
 	local spice_buff_speed = 1		--add to physics multiplier
 	local spice_buff_jump = 0.5		--add to physics multiplier
@@ -105,26 +104,5 @@ if mobs.mod and mobs.mod == "redo" then
 				end, armorgroups)
 		end
 	})
-
--- spawner block
-	if ENABLE_SPAWN_NODE then
-		minetest.register_node("mobs_sandworm:sandworm_spawner", {
-			description = "Sand Worm Spawner",
-			tiles = {"sandworm.png"},
-			is_ground_content = false,
-			groups = {cracky=3, stone=1, mob_spawner=1},
-			sounds = default.node_sound_stone_defaults({
-				dug = {name="sand", gain=0.25}
-			})
-		})
-		minetest.register_abm({
-			nodenames = {"mobs_sandworm:sandworm_spawner"},
-			interval = 180.0,
-			chance = 1,
-			action = function(pos, node, active_object_count, active_object_count_wider)
-				minetest.add_entity(pos, "mobs_sandworm:sandworm")
-			end
-		})
-	end
 
 end

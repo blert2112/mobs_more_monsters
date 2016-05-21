@@ -1,6 +1,4 @@
 
-local ENABLE_SPAWN_NODE = true
-
 -- sounds
 local lava_sounds = {
 	damage = "slimes_damage",
@@ -150,26 +148,4 @@ minetest.register_craftitem("mobs_slimes:lava_slime", {
 	image = "zmobs_lava_orb.png",
 	description="Lava Slime Ball",
 })
-
--- spawner block
-if ENABLE_SPAWN_NODE then
-	minetest.register_node("mobs_slimes:lava_spawner", {
-		description = "Lava Slime Spawner",
-		tiles = {"lava_slime_front.png"},
-		is_ground_content = false,
-		groups = {cracky=3, stone=1, mob_spawner=1},
-		sounds = default.node_sound_stone_defaults({
-			dug = {name="slimes_death", gain=0.25}
-		})
-	})
-	minetest.register_abm({
-		nodenames = {"mobs_slimes:lava_spawner"},
-		interval = 60.0,
-		chance = 1,
-		action = function(pos, node, active_object_count, active_object_count_wider)
-			local p = pos
-			p.y = p.y + 1
-			minetest.add_entity(p, "mobs_slimes:lava_big")
-		end
-	})
 end
