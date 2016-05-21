@@ -93,15 +93,17 @@ if mobs.mod and mobs.mod == "redo" then
 				jump = physics.jump + spice_buff_jump,
 				gravity = physics.gravity - spice_buff_gravity
 			})
-			minetest.after(spice_duration, function(armorgroups)
-					user:set_armor_groups(armorgroups)
-					local physics = user:get_physics_override()
+			minetest.after(spice_duration, function(user)
+				if user and user:is_player() then
+					user:set_armor_groups({immortal = 0})
+					local phys = user:get_physics_override()
 					user:set_physics_override({
-						speed = physics.speed - spice_buff_speed,
-						jump = physics.jump - spice_buff_jump,
-						gravity = physics.gravity + spice_buff_gravity
+						speed = phys.speed - spice_buff_speed,
+						jump = phys.jump - spice_buff_jump,
+						gravity = phys.gravity + spice_buff_gravity
 					})
-				end, armorgroups)
+				end
+			end, user)
 		end
 	})
 
