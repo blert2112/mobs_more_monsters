@@ -104,6 +104,7 @@ if mobs.mod and mobs.mod == "redo" then
 					})
 				end
 			end, user)
+			return itemstack
 		end
 	})
 
