@@ -43,12 +43,15 @@ if mobs.mod and mobs.mod == "redo" then
 			run_start = 40,		run_end = 63,
 			punch_start = 40,	punch_end = 63
 		},
+		sounds = {
+			random = "senderman_groan"
+		},
 		hp_min = 15,
 		hp_max = 30,
 		armor = 80,
 		light_damage = 2,
-		damage = 6,
-		reach = 4,
+		damage = 4,
+		reach = 2,
 		attack_type = "dogfight",
 		view_range = 30,
 		walk_velocity = 0.5,
@@ -68,7 +71,7 @@ if mobs.mod and mobs.mod == "redo" then
 
 			self.timeout = self.timeout + dtime
 			if self.timeout < freq then
-				return false
+				return true
 			end
 			
 			self.timeout = 0
@@ -77,7 +80,7 @@ if mobs.mod and mobs.mod == "redo" then
 			local mobpos = self.object:getpos()
 
 			if vector.distance(playerpos, mobpos) < self.reach then
-				return
+				return true
 			end
 
 			-- ensure a wide enough box for randomness
@@ -95,7 +98,7 @@ if mobs.mod and mobs.mod == "redo" then
 
 			local targetpos = airnodes[math.random(1, #airnodes)]
 			if minetest.is_protected(targetpos, "") then
-				return
+				return true
 			end
 
 			local radius = 1
