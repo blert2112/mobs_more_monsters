@@ -1,6 +1,8 @@
 **CODE**
 --------
-See Mobs.Redo license
+
+do_custom code (C) 2017 Tai "DuCake" Kedzierski
+Provided under LGPL v2.1
 
 
 **MODELS/TEXTURES**
@@ -11,4 +13,5 @@ Artist/origin: Devyn Collier Johnson (DevynCJohnson@Gmail.com)
 
 **SOUNDS**
 ----------
-Not applicable.
+
+(C) 2017 Tai "DuCake" Kedzierski
